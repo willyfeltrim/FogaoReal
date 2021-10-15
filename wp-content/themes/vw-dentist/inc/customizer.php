@@ -1160,22 +1160,21 @@ function vw_dentist_customize_register( $wp_customize ) {
 		'type'=> 'text'
 	));
 
-	$wp_customize->add_setting('vw_dentist_copyright_alingment',array(
-        'default' => 'center',
-        'sanitize_callback' => 'vw_dentist_sanitize_choices'
+	$wp_customize->add_setting('vw_dentist_copyright_font_size',array(
+		'default'=> '',
+		'sanitize_callback'	=> 'sanitize_text_field'
 	));
-	$wp_customize->add_control(new VW_Dentist_Image_Radio_Control($wp_customize, 'vw_dentist_copyright_alingment', array(
-        'type' => 'select',
-        'label' => __('Copyright Alignment','vw-dentist'),
-        'section' => 'vw_dentist_footer',
-        'settings' => 'vw_dentist_copyright_alingment',
-        'choices' => array(
-            'left' => esc_url(get_template_directory_uri()).'/assets/images/copyright1.png',
-            'center' => esc_url(get_template_directory_uri()).'/assets/images/copyright2.png',
-            'right' => esc_url(get_template_directory_uri()).'/assets/images/copyright3.png'
-    ))));
+	$wp_customize->add_control('vw_dentist_copyright_font_size',array(
+		'label'	=> __('Copyright Font Size','vw-dentist'),
+		'description'	=> __('Enter a value in pixels. Example:20px','vw-dentist'),
+		'input_attrs' => array(
+            'placeholder' => __( '10px', 'vw-dentist' ),
+        ),
+		'section'=> 'vw_dentist_footer',
+		'type'=> 'text'
+	));
 
-    $wp_customize->add_setting('vw_dentist_copyright_padding_top_bottom',array(
+	$wp_customize->add_setting('vw_dentist_copyright_padding_top_bottom',array(
 		'default'=> '',
 		'sanitize_callback'	=> 'sanitize_text_field'
 	));
@@ -1188,6 +1187,21 @@ function vw_dentist_customize_register( $wp_customize ) {
 		'section'=> 'vw_dentist_footer',
 		'type'=> 'text'
 	));
+
+	$wp_customize->add_setting('vw_dentist_copyright_alignment',array(
+        'default' => 'center',
+        'sanitize_callback' => 'vw_dentist_sanitize_choices'
+	));
+	$wp_customize->add_control(new VW_Dentist_Image_Radio_Control($wp_customize, 'vw_dentist_copyright_alignment', array(
+        'type' => 'select',
+        'label' => __('Copyright Alignment','vw-dentist'),
+        'section' => 'vw_dentist_footer',
+        'settings' => 'vw_dentist_copyright_alignment',
+        'choices' => array(
+            'left' => esc_url(get_template_directory_uri()).'/assets/images/copyright1.png',
+            'center' => esc_url(get_template_directory_uri()).'/assets/images/copyright2.png',
+            'right' => esc_url(get_template_directory_uri()).'/assets/images/copyright3.png'
+    ))));
 
 	$wp_customize->add_setting( 'vw_dentist_hide_show_scroll',array(
     	'default' => 1,

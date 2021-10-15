@@ -6,7 +6,7 @@ Author URI: https://www.vwthemes.com/
 Description: VW Dentist is specifically designed for dentists, dental hygienists, medicine, pharmacy, health care, hospital, surgeon website, nursing home, general clinics, gynaecology, veterinary clinics, endodontic, health clinics, community health centers, medical stores, dental hygiene, Tooth Sensors, MTG Dental Camera, dental implants, dental bleaching kits and scaling tools, biodegradable toothbrushes, root canal, sugar free, dental health services, drug stores, medical facilities, pediatric and overall medial websites, doctors, surgeons, Finishing & Polishing, Glass Ionomer Restoratives, Curing Lights, Tootbrush retail gynaecologist, Adhesives, Cements, Impression Materials, Composites, general therapist orthodontists, doctor, hospitals, medical research facilities, medical institution medical sector people, oral health care providers dental clinics as well as providers of oral health. It is also perfect fit for any medical as well as health organization. One of the special features of VW Dentist is that it is accompanied with the mobile ready design that is responsive to the core and is based on the Bootstrap 4 technology. Due to responsive nature, it works well on the screens of different dimensions. This theme comprises of targeted features having high functionality and all these features are for the medical and dental practices. One of the important specialities with VW Dentist is a very strong theme options, sticky post, Editor Style, Custom Colors, Featured Images, panel apart from an additional page as well as post-meta options. With the later, it becomes quite easy to customize various theme aspects and you can do all this with just some clicks. There is no requirement of coding skill. This theme is translation ready. You can easily drag and drop widgets as per your requirement. If you are just starting a dental clinic, VW Dentist is something you must go for and in case you check its demo, you will find this theme with a latest design and above all, entire feature list is quite impressive. Demo: https://www.vwthemes.net/vw-dentist-pro/
 Tested up to: 5.8
 Requires PHP: 7.2
-Version: 0.7.3
+Version: 0.7.4
 License: GPLv3.0 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: vw-dentist
@@ -903,11 +903,14 @@ body.page-template-custom-home-page.admin-bar .header-fixed, body.admin-bar .hea
   text-align: left;
   background: #13455e;
 }
-#footer h3 {
+#footer h3, #footer .wp-block-search .wp-block-search__label{
   color: #32dac3;
   font-size: 25px;
   padding: 10px 0 10px 0;
   letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-weight: bold;
 }
 #footer p{
   font-size: 14px;
@@ -931,6 +934,7 @@ body.page-template-custom-home-page.admin-bar .header-fixed, body.admin-bar .hea
   background: #0d374c;
   text-align:center;
   padding:20px 0;
+  border-top: 1px solid #fff;
 }
 #footer li.woocommerce-mini-cart-item.mini_cart_item {
   line-height: 22px;
@@ -1303,18 +1307,26 @@ h2#reply-title {
 #sidebar form{
   text-align: center;
 }
-#sidebar h3 {
+#sidebar h3, #sidebar .wp-block-search .wp-block-search__label{
   font-size: 20px;
   display: table;
   letter-spacing: 2px;
   background-color: #fff;
   padding: 0px 10px;
   margin: -28px auto 28px auto;
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  color: #13455e;
+  font-weight: bold;
 }
-#footer .wp-block-search .wp-block-search__inside-wrapper{
+#sidebar .wp-block-search .wp-block-search__label{
+  width: auto;
+}
+#footer .wp-block-search .wp-block-search__inside-wrapper, #sidebar .wp-block-search .wp-block-search__inside-wrapper{
   flex-wrap: wrap;
+  display: block;
 }
-#sidebar input[type="search"], #footer .wp-block-search .wp-block-search__input{
+#sidebar input[type="search"], #footer .wp-block-search .wp-block-search__input, #sidebar .wp-block-search .wp-block-search__input{
   padding: 15px;
   font-size:15px;
   margin-bottom: 10px;
@@ -1334,7 +1346,7 @@ h2#reply-title {
   width: 100%;
   letter-spacing: 1px;
 }
-#footer .wp-block-search .wp-block-search__button{
+#footer .wp-block-search .wp-block-search__button, #sidebar .wp-block-search .wp-block-search__button{
   background: #07a7e3;
   color: #fff;
   padding: 10px;

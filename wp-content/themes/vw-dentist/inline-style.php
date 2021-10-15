@@ -12,7 +12,7 @@
 		$vw_dentist_custom_css .='}';
 	}
 	if($vw_dentist_first_color != false){
-		$vw_dentist_custom_css .='h1,h2,h3,h4,h5,h6, .custom-social-icons i:hover, .logo p.site-title a, .logo h1 a, #serv-section h3, #sidebar caption, .post-navigation a, h2.woocommerce-loop-product__title,.woocommerce div.product .product_title, .woocommerce ul.products li.product .price,.woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce .quantity .qty, .woocommerce-message::before, .post-main-box h2 a, nav.woocommerce-MyAccount-navigation ul li a:hover{';
+		$vw_dentist_custom_css .='h1,h2,h3,h4,h5,h6, .custom-social-icons i:hover, .logo p.site-title a, .logo h1 a, #serv-section h3, #sidebar caption, .post-navigation a, h2.woocommerce-loop-product__title,.woocommerce div.product .product_title, .woocommerce ul.products li.product .price,.woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce .quantity .qty, .woocommerce-message::before, .post-main-box h2 a, nav.woocommerce-MyAccount-navigation ul li a:hover, #sidebar h3, #sidebar .wp-block-search .wp-block-search__label{';
 			$vw_dentist_custom_css .='color: '.esc_attr($vw_dentist_first_color).';';
 		$vw_dentist_custom_css .='}';
 	}
@@ -42,7 +42,7 @@
 	$vw_dentist_second_color = get_theme_mod('vw_dentist_second_color');
 
 	if($vw_dentist_second_color != false){
-		$vw_dentist_custom_css .='.view-more:hover, #footer .tagcloud a:hover, #comments input[type="submit"], #sidebar .custom-social-icons i,#footer .custom-social-icons i, #sidebar .tagcloud a:hover, .pagination span, .pagination a, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, nav.woocommerce-MyAccount-navigation ul li, #slider .carousel-control-prev-icon:hover, #slider .carousel-control-next-icon:hover, #comments a.comment-reply-link, #footer a.custom_read_more, #sidebar .more-button a:hover, .woocommerce nav.woocommerce-pagination ul li a, .nav-previous a, .nav-next a, .wp-block-button .wp-block-button__link:hover, #preloader, #footer .wp-block-search .wp-block-search__button{';
+		$vw_dentist_custom_css .='.view-more:hover, #footer .tagcloud a:hover, #comments input[type="submit"], #sidebar .custom-social-icons i,#footer .custom-social-icons i, #sidebar .tagcloud a:hover, .pagination span, .pagination a, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, nav.woocommerce-MyAccount-navigation ul li, #slider .carousel-control-prev-icon:hover, #slider .carousel-control-next-icon:hover, #comments a.comment-reply-link, #footer a.custom_read_more, #sidebar .more-button a:hover, .woocommerce nav.woocommerce-pagination ul li a, .nav-previous a, .nav-next a, .wp-block-button .wp-block-button__link:hover, #preloader, #footer .wp-block-search .wp-block-search__button, #sidebar .wp-block-search .wp-block-search__button{';
 			$vw_dentist_custom_css .='background-color: '.esc_attr($vw_dentist_second_color).';';
 		$vw_dentist_custom_css .='}';
 	}
@@ -94,7 +94,7 @@
 		$vw_dentist_custom_css .='}';
 	}
 	if($vw_dentist_third_color != false){
-		$vw_dentist_custom_css .='.service-btn a:hover, #footer h3{';
+		$vw_dentist_custom_css .='.service-btn a:hover, #footer h3, #footer .wp-block-search .wp-block-search__label{';
 			$vw_dentist_custom_css .='color: '.esc_attr($vw_dentist_third_color).';';
 		$vw_dentist_custom_css .='}';
 	}
@@ -374,10 +374,10 @@
 
 	/*-------------- Copyright Alignment ----------------*/
 
-	$vw_dentist_copyright_alingment = get_theme_mod('vw_dentist_copyright_alingment');
-	if($vw_dentist_copyright_alingment != false){
+	$vw_dentist_copyright_font_size = get_theme_mod('vw_dentist_copyright_font_size');
+	if($vw_dentist_copyright_font_size != false){
 		$vw_dentist_custom_css .='.copyright p{';
-			$vw_dentist_custom_css .='text-align: '.esc_attr($vw_dentist_copyright_alingment).';';
+			$vw_dentist_custom_css .='font-size: '.esc_attr($vw_dentist_copyright_font_size).';';
 		$vw_dentist_custom_css .='}';
 	}
 
@@ -385,6 +385,13 @@
 	if($vw_dentist_copyright_padding_top_bottom != false){
 		$vw_dentist_custom_css .='#footer-2{';
 			$vw_dentist_custom_css .='padding-top: '.esc_attr($vw_dentist_copyright_padding_top_bottom).'; padding-bottom: '.esc_attr($vw_dentist_copyright_padding_top_bottom).';';
+		$vw_dentist_custom_css .='}';
+	}
+
+	$vw_dentist_copyright_alignment = get_theme_mod('vw_dentist_copyright_alignment');
+	if($vw_dentist_copyright_alignment != false){
+		$vw_dentist_custom_css .='.copyright p{';
+			$vw_dentist_custom_css .='text-align: '.esc_attr($vw_dentist_copyright_alignment).';';
 		$vw_dentist_custom_css .='}';
 	}
 

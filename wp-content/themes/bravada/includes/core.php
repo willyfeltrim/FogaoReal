@@ -101,25 +101,26 @@ function bravada_header_image_url() {
 	$theme_headerw = floor( cryout_get_option( 'theme_sitewidth' ) * $limit );
 
 	// Check if this is a post or page, if it has a thumbnail, and if it's a big one
+	$post_id = false; 
 	global $post;
-	$post_id = $post->ID;
+	if ( !empty( $post->ID ) ) $post_id = $post->ID;
 	
 	// Check if static frontpage (but not landing page)
 	if ( is_front_page() && ! is_home() && ! cryout_is_landingpage() ) {
 		$front_id = get_option( 'page_on_front' );
-		if ( !empty( $front_id ) )  $post_id = $front_id;
+		if ( !empty( $front_id ) ) $post_id = $front_id;
 	}
 	// Check if blog page
-	if ( is_home() ) {
+	if ( cryout_on_blog() ) {
 		$blog_id = get_option( 'page_for_posts' );
-		if ( !empty( $blog_id ) )  $post_id = $blog_id;
-	}	
+		if ( !empty( $blog_id ) ) $post_id = $blog_id;
+	}
 	
 	// default to general header image 
 	$header_image = FALSE;
 	if ( get_header_image() != '' ) { $header_image = get_header_image(); }
 	
-	if ( ( is_singular() || is_home() || is_front_page() ) && has_post_thumbnail( $post->ID ) && $theme_fheader &&
+	if ( ( is_singular() || cryout_on_blog() ) && has_post_thumbnail( $post_id ) && $theme_fheader &&
 		( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'bravada-header' ) )
 		 ) :
 			if ( ( absint($image[1]) >= $theme_headerw ) && ( absint($image[2]) >= $theme_headerh ) ) {
@@ -131,10 +132,8 @@ function bravada_header_image_url() {
 				if ( ( absint($image[1]) >= $theme_headerw ) && ( absint($image[2]) >= $theme_headerh ) ) {
 					// 'full' image is large enough
 					$header_image = $image[0];
-				} /* else {
-					// even 'full' image is too small, don't return an image
-					//$header_image = false;
-				} */
+				} 
+				// else: even 'full' image is too small, don't return an image
 			}
 	endif;
 

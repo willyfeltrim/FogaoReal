@@ -980,8 +980,8 @@ msgstr ""
 msgid 'Copyright 2019, .....'
 msgstr ""
 
-#: inc/customizer.php:
-msgid 'Show / Hide Scroll To Top'
+#: inc/customizer.php:829
+msgid 'Copyright Font Size'
 msgstr ""
 
 #: inc/customizer.php:948
@@ -992,7 +992,7 @@ msgstr ""
 msgid 'Copyright Padding Top Bottom'
 msgstr ""
 
-#: inc/customizer.php:977
+#: inc/customizer.php:
 msgid 'Show / Hide Scroll To Top'
 msgstr ""
 

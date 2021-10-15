@@ -4,7 +4,7 @@ Tags: left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.2
-Stable tag: 0.7.3
+Stable tag: 0.7.4
 License: GPLv3.0 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -282,6 +282,13 @@ VW Dentist is specifically designed for dentists, dental hygienists, medicine, p
 * Added some classes in global color.
 * Added z-index to scroll to top.
 * Resolved theme check errors.
+* Updated language folder.
+
+= 0.7.4 =
+* Changed sidebar widget search css.
+* Added sidebar widget search bg color in global color.
+* Added copyright font size option in customizer.
+* Resolved block patterns css errors.
 * Updated language folder.
 
 == Resources ==

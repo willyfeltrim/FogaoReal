@@ -3,7 +3,7 @@
 Contributors: Cryout Creations
 Requires at least: 4.5
 Tested up to: 5.8.0
-Stable tag: 1.0.6
+Stable tag: 1.0.6.1
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -89,6 +89,14 @@ The rest of the bundled images are created by Cryout Creations and released with
 
 
 == Changelog ==
+
+= 1.0.6.1 =
+*Release date: 2021.10.05*
+
+* Fixed a notice displayed in some instances related to the header image since 1.0.6
+* Fixed blog homepage sometimes displaying wrong featured image in header since 1.0.6
+* Updated to Cryout Framework 0.8.6.2:
+	* Added static blog page detection function (for featured images in header) 
 
 = 1.0.6 =
 *Release date: 2021.09.03*

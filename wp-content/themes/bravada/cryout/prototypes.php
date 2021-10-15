@@ -433,6 +433,14 @@ function cryout_gen_featured_sizes( $default = 1440, $magazinelayout = false, $l
 } // cryout_gen_featured_sizes()
 
 /**
+ * Shorter detection of blog page (when separate from homepage) 
+ */
+function cryout_on_blog() {
+	if ( ( 'page' == get_option( 'show_on_front' )) && is_home() ) return true; 
+	return false;
+} // cryout_on_blog()
+
+/**
  * Detects if theme has landing page functionality enabled and active
  */
 function cryout_is_landingpage() {
