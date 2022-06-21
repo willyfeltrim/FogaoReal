@@ -20,7 +20,7 @@
 
 // ** Configurações do MySQL - Você pode pegar estas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define( 'DB_NAME', 'dorthus_database' );
+define( 'DB_NAME', 'fogao_real_database' );
 
 /** Usuário do banco de dados MySQL */
 define( 'DB_USER', 'root' );
